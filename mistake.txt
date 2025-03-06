@@ -1,3 +1,24 @@
+PS D:\projects4grade\Signal> cd build
+PS D:\projects4grade\Signal\build> cmake -G "MinGW Makefiles" ..
+-- The C compiler identification is GNU 13.2.0
+-- The CXX compiler identification is GNU 13.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/msys64/ucrt64/bin/cc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/msys64/ucrt64/bin/c++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python: C:/Users/37111/AppData/Local/Programs/Python/Python313/python.exe (found version "3.13.2") found components: Interpreter Development Development.Module Development.Embed
+-- pybind11::lto disabled (problems with undefined symbols for MinGW for now)
+-- pybind11::thin_lto disabled (problems with undefined symbols for MinGW for now)
+-- Found pybind11: C:/Users/37111/AppData/Local/Programs/Python/Python313/Lib/site-packages/pybind11/include (found version "2.13.6")
+-- Configuring done (9.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/projects4grade/Signal/build
 PS D:\projects4grade\Signal\build> cmake --build .
 [ 14%] Building CXX object CMakeFiles/signal_processor.dir/src/signal.cpp.obj
 [ 28%] Building CXX object CMakeFiles/signal_processor.dir/src/FIR.cpp.obj
