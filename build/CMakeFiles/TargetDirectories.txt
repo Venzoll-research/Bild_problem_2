@@ -1,0 +1,3 @@
+D:/projects4grade/Signal/build/CMakeFiles/signal_processor.dir
+D:/projects4grade/Signal/build/CMakeFiles/edit_cache.dir
+D:/projects4grade/Signal/build/CMakeFiles/rebuild_cache.dir
