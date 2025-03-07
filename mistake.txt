@@ -1,32 +1,18 @@
-PS D:\projects4grade\Signal> cd build
-PS D:\projects4grade\Signal\build> cmake -G "MinGW Makefiles" ..
--- The C compiler identification is GNU 13.2.0
--- The CXX compiler identification is GNU 13.2.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/msys64/ucrt64/bin/cc.exe - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: C:/msys64/ucrt64/bin/c++.exe - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Found Python: C:/Users/37111/AppData/Local/Programs/Python/Python313/python.exe (found version "3.13.2") found components: Interpreter Development Development.Module Development.Embed
--- pybind11::lto disabled (problems with undefined symbols for MinGW for now)
--- pybind11::thin_lto disabled (problems with undefined symbols for MinGW for now)
--- Found pybind11: C:/Users/37111/AppData/Local/Programs/Python/Python313/Lib/site-packages/pybind11/include (found version "2.13.6")
--- Configuring done (9.3s)
--- Generating done (0.0s)
--- Build files have been written to: D:/projects4grade/Signal/build
-PS D:\projects4grade\Signal\build> cmake --build .
-[ 14%] Building CXX object CMakeFiles/signal_processor.dir/src/signal.cpp.obj
-[ 28%] Building CXX object CMakeFiles/signal_processor.dir/src/FIR.cpp.obj
+PS D:\projects4grade\Signal> all:
+>>     g++ -g -O0 -Wall -Wextra -shared -static -std=c++17 -fPIC -IC:/Users/37111/AppData/Local/Programs/Python/Python313 -IC:/Users/37111/AppData/Local/Programs/Python/Python313/Lib/site-packages/pybind11/share/cmake/pybind11 -Iinclude src/*.cpp -LC:/Users/37111/AppData/Local/Programs/Python/Python313/Lib -lpython313 -o python/signal_processor.pyd
+all: : Имя "all:" не распознано как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правильность написан
+ия имени, а также наличие и правильность пути, после чего повторите попытку.
+строка:1 знак:1
++ all:
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (all::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
 In file included from C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:41,
                  from C:/msys64/ucrt64/include/c++/13.2.0/ios:44,
                  from C:/msys64/ucrt64/include/c++/13.2.0/istream:40,
                  from C:/msys64/ucrt64/include/c++/13.2.0/fstream:40,
-                 from D:/projects4grade/Signal/include/signal.h:6,
+                 from include/signal.h:6,
                  from C:/msys64/ucrt64/include/pthread.h:68,
                  from C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h:35,
                  from C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h:148,
@@ -34,9 +20,9 @@ In file included from C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:41,
                  from C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_base.h:61,
                  from C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr.h:53,
                  from C:/msys64/ucrt64/include/c++/13.2.0/memory:80,
-                 from D:/projects4grade/Signal/include/FilterBase.h:5,
-                 from D:/projects4grade/Signal/include/FIR.h:4,
-                 from D:\projects4grade\Signal\src\FIR.cpp:1:
+                 from src/../include/FilterBase.h:5,
+                 from src/../include/FIR.h:4,
+                 from src/FIR.cpp:1:
 C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:342:12: error: '__gthread_once_t' does not name a type
   342 |     static __gthread_once_t _S_once;
       |            ^~~~~~~~~~~~~~~~
@@ -142,6 +128,370 @@ C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:97:5: error: class 'std::ba
 C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:97:51: error: '_M_lock' was not declared in this scope
    97 |     _M_lock(), _M_file(std::move(__rhs._M_file), &_M_lock),
       |                                                   ^~~~~~~
-mingw32-make[2]: *** [CMakeFiles\signal_processor.dir\build.make:94: CMakeFiles/signal_processor.dir/src/FIR.cpp.obj] Error 1
-mingw32-make[1]: *** [CMakeFiles\Makefile2:86: CMakeFiles/signal_processor.dir/all] Error 2
-mingw32-make: *** [Makefile:90: all] Error 2
+In file included from C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:41,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/ios:44,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/istream:40,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/fstream:40,
+                 from include/signal.h:6,
+                 from C:/msys64/ucrt64/include/pthread.h:68,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h:35,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h:148,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/ext/atomicity.h:35,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_base.h:61,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr.h:53,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/memory:80,
+                 from src/../include/FilterBase.h:5,
+                 from src/../include/IIR.h:4,
+                 from src/IIR.cpp:1:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:342:12: error: '__gthread_once_t' does not name a type
+  342 |     static __gthread_once_t _S_once;
+      |            ^~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:383:13: error: '_Atomic_word' does not name a type
+  383 |     mutable _Atomic_word                _M_refcount;
+      |             ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:392:12: error: '__gthread_once_t' does not name a type
+  392 |     static __gthread_once_t             _S_once;
+      |            ^~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In constructor 'std::locale::facet::facet(std::size_t)':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:409:40: error: class 'std::locale::facet' does not have any field named '_M_refcount'
+  409 |     facet(size_t __refs = 0) throw() : _M_refcount(__refs ? 1 : 0)
+      |                                        ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In member function 'void std::locale::facet::_M_add_reference() const':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:453:18: error: '__atomic_add_dispatch' is not a member of '__gnu_cxx'
+  453 |     { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:453:41: error: '_M_refcount' was not declared in this scope
+  453 |     { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                                         ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In member function 'void std::locale::facet::_M_remove_reference() const':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:460:22: error: '__exchange_and_add_dispatch' is not a member of '__gnu_cxx'
+  460 |       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:460:51: error: '_M_refcount' was not declared in this scope
+  460 |       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
+      |                                                   ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: At global scope:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:513:12: error: '_Atomic_word' does not name a type
+  513 |     static _Atomic_word         _S_refcount;
+      |            ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:556:5: error: '_Atomic_word' does not name a type
+  556 |     _Atomic_word                        _M_refcount;
+      |     ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In member function 'void std::locale::_Impl::_M_add_reference()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:571:18: error: '__atomic_add_dispatch' is not a member of '__gnu_cxx'
+  571 |     { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:571:41: error: '_M_refcount' was not declared in this scope
+  571 |     { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                                         ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In member function 'void std::locale::_Impl::_M_remove_reference()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:578:22: error: '__exchange_and_add_dispatch' is not a member of '__gnu_cxx'
+  578 |       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:578:51: error: '_M_refcount' was not declared in this scope
+  578 |       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
+      |                                                   ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h: At global scope:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:572:7: error: '_Atomic_word' does not name a type
+  572 |       _Atomic_word              _M_refcount;  // 0 means one reference.
+      |       ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:652:14: error: '_Atomic_word' does not name a type
+  652 |       static _Atomic_word       _S_refcount;
+      |              ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h: In constructor 'std::ios_base::_Callback_list::_Callback_list(std::ios_base::event_callback, int, std::ios_base::_Callback_list*)':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:576:56: error: class 'std::ios_base::_Callback_list' does not have any field named '_M_refcount'
+  576 |       : _M_next(__cb), _M_fn(__fn), _M_index(__index), _M_refcount(0) { }
+      |                                                        ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h: In member function 'void std::ios_base::_Callback_list::_M_add_reference()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:579:39: error: '__atomic_add_dispatch' is not a member of '__gnu_cxx'
+  579 |       _M_add_reference() { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                                       ^~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:579:62: error: '_M_refcount' was not declared in this scope
+  579 |       _M_add_reference() { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                                                              ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h: In member function 'int std::ios_base::_Callback_list::_M_remove_reference()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:587:32: error: '__exchange_and_add_dispatch' is not a member of '__gnu_cxx'
+  587 |         int __res = __gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:587:61: error: '_M_refcount' was not declared in this scope
+  587 |         int __res = __gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1);
+      |                                                             ^~~~~~~~~~~
+In file included from C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h:40,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/fstream:44:
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h: At global scope:
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h:48:11: error: '__gthread_mutex_t' does not name a type
+   48 |   typedef __gthread_mutex_t __c_lock;
+      |           ^~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h:63:28: error: expected ')' before '*' token
+   63 |       __basic_file(__c_lock* __lock = 0) throw ();
+      |                   ~        ^
+      |                            )
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h:66:41: error: '__c_lock' has not been declared
+   66 |       __basic_file(__basic_file&& __rv, __c_lock* = 0) noexcept
+      |                                         ^~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/fstream:122:7: error: '__c_lock' does not name a type; did you mean '__c_locale'?
+  122 |       __c_lock                  _M_lock;
+      |       ^~~~~~~~
+      |       __c_locale
+In file included from C:/msys64/ucrt64/include/c++/13.2.0/fstream:1300:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc: In constructor 'std::basic_filebuf<_CharT, _Traits>::basic_filebuf()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:81:43: error: class 'std::basic_filebuf<_CharT, _Traits>' does not have any field named '_M_lock'
+   81 |     basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
+      |                                           ^~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:81:63: error: '_M_lock' was not declared in this scope
+   81 |     basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
+      |                                                               ^~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc: In constructor 'std::basic_filebuf<_CharT, _Traits>::basic_filebuf(std::basic_filebuf<_CharT, _Traits>&&)':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:97:5: error: class 'std::basic_filebuf<_CharT, _Traits>' does not have any field named '_M_lock'
+   97 |     _M_lock(), _M_file(std::move(__rhs._M_file), &_M_lock),
+      |     ^~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:97:51: error: '_M_lock' was not declared in this scope
+   97 |     _M_lock(), _M_file(std::move(__rhs._M_file), &_M_lock),
+      |                                                   ^~~~~~~
+In file included from C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:41,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/ios:44,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/istream:40,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/fstream:40,
+                 from include/signal.h:6,
+                 from C:/msys64/ucrt64/include/pthread.h:68,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h:35,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h:148,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/ext/atomicity.h:35,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_base.h:61,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr.h:53,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/memory:80,
+                 from src/../include/SignalProcessor.h:7,
+                 from src/SignalProcessor.cpp:1:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:342:12: error: '__gthread_once_t' does not name a type
+  342 |     static __gthread_once_t _S_once;
+      |            ^~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:383:13: error: '_Atomic_word' does not name a type
+  383 |     mutable _Atomic_word                _M_refcount;
+      |             ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:392:12: error: '__gthread_once_t' does not name a type
+  392 |     static __gthread_once_t             _S_once;
+      |            ^~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In constructor 'std::locale::facet::facet(std::size_t)':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:409:40: error: class 'std::locale::facet' does not have any field named '_M_refcount'
+  409 |     facet(size_t __refs = 0) throw() : _M_refcount(__refs ? 1 : 0)
+      |                                        ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In member function 'void std::locale::facet::_M_add_reference() const':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:453:18: error: '__atomic_add_dispatch' is not a member of '__gnu_cxx'
+  453 |     { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:453:41: error: '_M_refcount' was not declared in this scope
+  453 |     { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                                         ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In member function 'void std::locale::facet::_M_remove_reference() const':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:460:22: error: '__exchange_and_add_dispatch' is not a member of '__gnu_cxx'
+  460 |       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:460:51: error: '_M_refcount' was not declared in this scope
+  460 |       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
+      |                                                   ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: At global scope:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:513:12: error: '_Atomic_word' does not name a type
+  513 |     static _Atomic_word         _S_refcount;
+      |            ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:556:5: error: '_Atomic_word' does not name a type
+  556 |     _Atomic_word                        _M_refcount;
+      |     ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In member function 'void std::locale::_Impl::_M_add_reference()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:571:18: error: '__atomic_add_dispatch' is not a member of '__gnu_cxx'
+  571 |     { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:571:41: error: '_M_refcount' was not declared in this scope
+  571 |     { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                                         ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In member function 'void std::locale::_Impl::_M_remove_reference()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:578:22: error: '__exchange_and_add_dispatch' is not a member of '__gnu_cxx'
+  578 |       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:578:51: error: '_M_refcount' was not declared in this scope
+  578 |       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
+      |                                                   ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h: At global scope:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:572:7: error: '_Atomic_word' does not name a type
+  572 |       _Atomic_word              _M_refcount;  // 0 means one reference.
+      |       ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:652:14: error: '_Atomic_word' does not name a type
+  652 |       static _Atomic_word       _S_refcount;
+      |              ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h: In constructor 'std::ios_base::_Callback_list::_Callback_list(std::ios_base::event_callback, int, std::ios_base::_Callback_list*)':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:576:56: error: class 'std::ios_base::_Callback_list' does not have any field named '_M_refcount'
+  576 |       : _M_next(__cb), _M_fn(__fn), _M_index(__index), _M_refcount(0) { }
+      |                                                        ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h: In member function 'void std::ios_base::_Callback_list::_M_add_reference()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:579:39: error: '__atomic_add_dispatch' is not a member of '__gnu_cxx'
+  579 |       _M_add_reference() { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                                       ^~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:579:62: error: '_M_refcount' was not declared in this scope
+  579 |       _M_add_reference() { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                                                              ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h: In member function 'int std::ios_base::_Callback_list::_M_remove_reference()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:587:32: error: '__exchange_and_add_dispatch' is not a member of '__gnu_cxx'
+  587 |         int __res = __gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:587:61: error: '_M_refcount' was not declared in this scope
+  587 |         int __res = __gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1);
+      |                                                             ^~~~~~~~~~~
+In file included from C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h:40,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/fstream:44:
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h: At global scope:
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h:48:11: error: '__gthread_mutex_t' does not name a type
+   48 |   typedef __gthread_mutex_t __c_lock;
+      |           ^~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h:63:28: error: expected ')' before '*' token
+   63 |       __basic_file(__c_lock* __lock = 0) throw ();
+      |                   ~        ^
+      |                            )
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h:66:41: error: '__c_lock' has not been declared
+   66 |       __basic_file(__basic_file&& __rv, __c_lock* = 0) noexcept
+      |                                         ^~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/fstream:122:7: error: '__c_lock' does not name a type; did you mean '__c_locale'?
+  122 |       __c_lock                  _M_lock;
+      |       ^~~~~~~~
+      |       __c_locale
+In file included from C:/msys64/ucrt64/include/c++/13.2.0/fstream:1300:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc: In constructor 'std::basic_filebuf<_CharT, _Traits>::basic_filebuf()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:81:43: error: class 'std::basic_filebuf<_CharT, _Traits>' does not have any field named '_M_lock'
+   81 |     basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
+      |                                           ^~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:81:63: error: '_M_lock' was not declared in this scope
+   81 |     basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
+      |                                                               ^~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc: In constructor 'std::basic_filebuf<_CharT, _Traits>::basic_filebuf(std::basic_filebuf<_CharT, _Traits>&&)':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:97:5: error: class 'std::basic_filebuf<_CharT, _Traits>' does not have any field named '_M_lock'
+   97 |     _M_lock(), _M_file(std::move(__rhs._M_file), &_M_lock),
+      |     ^~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:97:51: error: '_M_lock' was not declared in this scope
+   97 |     _M_lock(), _M_file(std::move(__rhs._M_file), &_M_lock),
+      |                                                   ^~~~~~~
+In file included from C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:41,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/ios:44,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/istream:40,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/fstream:40,
+                 from include/signal.h:6,
+                 from C:/msys64/ucrt64/include/pthread.h:68,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h:35,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h:148,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/ext/atomicity.h:35,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_base.h:61,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr.h:53,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/memory:80,
+                 from src/../include/FilterBase.h:5,
+                 from src/../include/Summator.h:4,
+                 from src/Summator.cpp:1:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:342:12: error: '__gthread_once_t' does not name a type
+  342 |     static __gthread_once_t _S_once;
+      |            ^~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:383:13: error: '_Atomic_word' does not name a type
+  383 |     mutable _Atomic_word                _M_refcount;
+      |             ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:392:12: error: '__gthread_once_t' does not name a type
+  392 |     static __gthread_once_t             _S_once;
+      |            ^~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In constructor 'std::locale::facet::facet(std::size_t)':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:409:40: error: class 'std::locale::facet' does not have any field named '_M_refcount'
+  409 |     facet(size_t __refs = 0) throw() : _M_refcount(__refs ? 1 : 0)
+      |                                        ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In member function 'void std::locale::facet::_M_add_reference() const':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:453:18: error: '__atomic_add_dispatch' is not a member of '__gnu_cxx'
+  453 |     { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:453:41: error: '_M_refcount' was not declared in this scope
+  453 |     { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                                         ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In member function 'void std::locale::facet::_M_remove_reference() const':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:460:22: error: '__exchange_and_add_dispatch' is not a member of '__gnu_cxx'
+  460 |       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:460:51: error: '_M_refcount' was not declared in this scope
+  460 |       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
+      |                                                   ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: At global scope:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:513:12: error: '_Atomic_word' does not name a type
+  513 |     static _Atomic_word         _S_refcount;
+      |            ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:556:5: error: '_Atomic_word' does not name a type
+  556 |     _Atomic_word                        _M_refcount;
+      |     ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In member function 'void std::locale::_Impl::_M_add_reference()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:571:18: error: '__atomic_add_dispatch' is not a member of '__gnu_cxx'
+  571 |     { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:571:41: error: '_M_refcount' was not declared in this scope
+  571 |     { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                                         ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h: In member function 'void std::locale::_Impl::_M_remove_reference()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:578:22: error: '__exchange_and_add_dispatch' is not a member of '__gnu_cxx'
+  578 |       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h:578:51: error: '_M_refcount' was not declared in this scope
+  578 |       if (__gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1) == 1)
+      |                                                   ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h: At global scope:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:572:7: error: '_Atomic_word' does not name a type
+  572 |       _Atomic_word              _M_refcount;  // 0 means one reference.
+      |       ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:652:14: error: '_Atomic_word' does not name a type
+  652 |       static _Atomic_word       _S_refcount;
+      |              ^~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h: In constructor 'std::ios_base::_Callback_list::_Callback_list(std::ios_base::event_callback, int, std::ios_base::_Callback_list*)':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:576:56: error: class 'std::ios_base::_Callback_list' does not have any field named '_M_refcount'
+  576 |       : _M_next(__cb), _M_fn(__fn), _M_index(__index), _M_refcount(0) { }
+      |                                                        ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h: In member function 'void std::ios_base::_Callback_list::_M_add_reference()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:579:39: error: '__atomic_add_dispatch' is not a member of '__gnu_cxx'
+  579 |       _M_add_reference() { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                                       ^~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:579:62: error: '_M_refcount' was not declared in this scope
+  579 |       _M_add_reference() { __gnu_cxx::__atomic_add_dispatch(&_M_refcount, 1); }
+      |                                                              ^~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h: In member function 'int std::ios_base::_Callback_list::_M_remove_reference()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:587:32: error: '__exchange_and_add_dispatch' is not a member of '__gnu_cxx'
+  587 |         int __res = __gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h:587:61: error: '_M_refcount' was not declared in this scope
+  587 |         int __res = __gnu_cxx::__exchange_and_add_dispatch(&_M_refcount, -1);
+      |                                                             ^~~~~~~~~~~
+In file included from C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h:40,
+                 from C:/msys64/ucrt64/include/c++/13.2.0/fstream:44:
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h: At global scope:
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h:48:11: error: '__gthread_mutex_t' does not name a type
+   48 |   typedef __gthread_mutex_t __c_lock;
+      |           ^~~~~~~~~~~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h:63:28: error: expected ')' before '*' token
+   63 |       __basic_file(__c_lock* __lock = 0) throw ();
+      |                   ~        ^
+      |                            )
+C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h:66:41: error: '__c_lock' has not been declared
+   66 |       __basic_file(__basic_file&& __rv, __c_lock* = 0) noexcept
+      |                                         ^~~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/fstream:122:7: error: '__c_lock' does not name a type; did you mean '__c_locale'?
+  122 |       __c_lock                  _M_lock;
+      |       ^~~~~~~~
+      |       __c_locale
+In file included from C:/msys64/ucrt64/include/c++/13.2.0/fstream:1300:
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc: In constructor 'std::basic_filebuf<_CharT, _Traits>::basic_filebuf()':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:81:43: error: class 'std::basic_filebuf<_CharT, _Traits>' does not have any field named '_M_lock'
+   81 |     basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
+      |                                           ^~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:81:63: error: '_M_lock' was not declared in this scope
+   81 |     basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
+      |                                                               ^~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc: In constructor 'std::basic_filebuf<_CharT, _Traits>::basic_filebuf(std::basic_filebuf<_CharT, _Traits>&&)':
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:97:5: error: class 'std::basic_filebuf<_CharT, _Traits>' does not have any field named '_M_lock'
+   97 |     _M_lock(), _M_file(std::move(__rhs._M_file), &_M_lock),
+      |     ^~~~~~~
+C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc:97:51: error: '_M_lock' was not declared in this scope
+   97 |     _M_lock(), _M_file(std::move(__rhs._M_file), &_M_lock),
+      |                                                   ^~~~~~~
+src/Summator.cpp: In member function 'virtual Signal Summator::Filter(const Signal&)':
+src/Summator.cpp:8:39: warning: unused parameter 'inputSignal' [-Wunused-parameter]
+    8 | Signal Summator::Filter(const Signal& inputSignal) {
+      |                         ~~~~~~~~~~~~~~^~~~~~~~~~~
+src/Summator.cpp: In member function 'virtual double Summator::operator()(double)':
+src/Summator.cpp:20:36: warning: unused parameter 'x_t' [-Wunused-parameter]
+   20 | double Summator::operator()(double x_t) {
+      |                             ~~~~~~~^~~

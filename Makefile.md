@@ -1,0 +1,2 @@
+all:
+	g++ -g -O0 -Wall -Wextra -shared -static -std=c++17 -fPIC -IC:/Users/37111/AppData/Local/Programs/Python/Python313 -IC:/Users/37111/AppData/Local/Programs/Python/Python313/Lib/site-packages/pybind11/share/cmake/pybind11 -Iinclude src/*.cpp -LC:/Users/37111/AppData/Local/Programs/Python/Python313/Lib -lpython313 -o python/signal_processor.pyd
